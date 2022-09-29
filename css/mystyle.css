@@ -1,0 +1,158 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Background Colors */
+  --bg_dark: #272727;
+  --bg_orange: #ff9933;
+  --bg_teal: #007faa;
+  /* Text Colors */
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+.top_bar {
+  background-color: var(--bg_dark);
+}
+
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  /* padding: 15px 40px; */
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 1.6rem;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
+}
+
+.btn-orange {
+  background-color: var(--bg_orange);
+  color: #fff;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom 5s ease-out;
+  animation-fill-mode: backwards;
+}
+
+/* Navbar */
+#main_navbar {
+  background: url("/img/logo_orange_bg.svg") no-repeat;
+  background-size: 40%;
+  background-position: -10%;
+}
+
+/* Hero Area starts here*/
+#hero_area {
+  width: 100%;
+  height: 60rem;
+}
+
+#hero_area_bg {
+  background-color: var(--bg_teal);
+  clip-path: polygon(0 0, 100% 0%, 100% 75%, 0% 100%);
+  height: 100%;
+}
+/* Hero Area ends here*/
+
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+
+
+
+/* Animations starts here */
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+/* Animations ends here */
+
+/* Media Query starts here */
+@media screen and (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+  }
+}
+/* Media Query ends here */
